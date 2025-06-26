@@ -11,7 +11,6 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
-import org.springframework.http.HttpMethod;
 
 @Configuration
 public class SecurityConfig {
@@ -28,8 +27,8 @@ public class SecurityConfig {
                 .requestMatchers(
                         "/", "/index.html",
                         "/app.js", "/styles.css", "/theme.js",
-                        "/auth/register", "/auth/login", "/auth/session",
-                        "/swagger-ui.html", "/v3/api-docs/**", "/swagger-ui/**"
+                        "/api/auth/register", "/api/auth/login", "/api/auth/session",
+                        "/api/swagger-ui.html", "/api/v3/api-docs/**", "/api/swagger-ui/**"
                 ).permitAll()
                 .anyRequest().authenticated()
             )

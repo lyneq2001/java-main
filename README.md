@@ -20,7 +20,7 @@ java -jar target/Lista5-0.0.1-SNAPSHOT.jar
 
 The application exposes CRUD endpoints under `/api`. Admins can manage books under `/api/books`, authors under `/api/authors`, users under `/api/users` and loans under `/api/loans`.
 
-Swagger UI is available once the application is running at `http://localhost:8080/swagger-ui.html` for interactive API documentation.
+Swagger UI is available once the application is running at `http://localhost:8080/api/swagger-ui.html` for interactive API documentation.
 
 ### Web UI
 
