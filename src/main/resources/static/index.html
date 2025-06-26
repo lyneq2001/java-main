@@ -369,6 +369,27 @@ function login(){
         .catch(e=> showToast('Error', e.message || 'Login failed','danger'));
 }
 
+function register(){
+    const username = document.getElementById('regUsername').value;
+    const password = document.getElementById('regPassword').value;
+    if(!username || !password){
+        showToast('Error','Please enter both username and password','danger');
+        return;
+    }
+    fetch('/api/auth/register', {
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({username,password})
+    })
+        .then(handleResponse)
+        .then(() => {
+            showToast('Success','Registered successfully!','success');
+            document.getElementById('regUsername').value='';
+            document.getElementById('regPassword').value='';
+        })
+        .catch(e=> showToast('Error', e.message || 'Registration failed','danger'));
+}
+
 
 function logout(){
     fetch('/api/auth/logout', { method:'POST', headers:{'Authorization':authHeader}})
