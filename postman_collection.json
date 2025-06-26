@@ -1,0 +1,26 @@
+{
+  "info": {
+    "name": "Library API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Register",
+      "request": {
+        "method": "POST",
+        "header": [{"key":"Content-Type","value":"application/json"}],
+        "url": {"raw": "{{baseUrl}}/auth/register"},
+        "body": {"mode":"raw","raw":"{\n  \"username\": \"user\",\n  \"password\": \"pass\"\n}"}
+      }
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [{"key":"Content-Type","value":"application/json"}],
+        "url": {"raw": "{{baseUrl}}/auth/login"},
+        "body": {"mode":"raw","raw":"{\n  \"username\": \"user\",\n  \"password\": \"pass\"\n}"}
+      }
+    }
+  ]
+}
