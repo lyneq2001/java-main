@@ -32,6 +32,7 @@ is available at `/api/index.html`. Start the application and navigate to
 
 Authentication is performed via:
 
+* `POST /api/auth/register` – create a new user account.
 * `POST /api/auth/login` &ndash; authenticate with an administrator username and password. The response contains a JWT token.
 
 Include this token in the `Authorization` header using the `Bearer` scheme when calling secured `/api` endpoints.
