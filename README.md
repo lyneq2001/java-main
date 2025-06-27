@@ -22,12 +22,6 @@ The application exposes CRUD endpoints under `/api`. Admins can manage books und
 
 Swagger UI is available once the application is running at `http://localhost:8080/api/swagger-ui.html` for interactive API documentation.
 
-### Web UI
-
-The application is served under the `/api` path. A browser interface for administrators
-is available at `/api/index.html`. Start the application and navigate to
-`http://localhost:8080/api/` to log in and manage the library catalogue.
-
 ### Authentication
 
 Authentication is performed via:
